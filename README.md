@@ -21,7 +21,6 @@ Please cite our paper if the code is useful for your project.
   year={TBD},
   publisher={TBD}
 }
-
 ```
 You may also find our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d) useful.
 
