@@ -3,7 +3,7 @@ This bidirectional Parallel Distributed Processing (PDP) network was trained wit
 
 # Paper
 ![architecture](architecture.png)
-<img src="architecture.png" width="200">
+<img src="architecture.png" width="500">
 
 # Paper
 This repo implements our paper:
