@@ -6,7 +6,7 @@ This bidirectional Parallel Distributed Processing (PDP) network was trained wit
 
 This repo implements our paper:
 
-Lim, O'Brien, & Onnis (submitted), “[Orthography-phonology consistency in English: Theory- and data-driven measures and their impact on auditory vs. visual word recognition](link TBD),” in [journal to be confirmed].
+Lim, O'Brien, & Onnis (submitted), “[Orthography-phonology consistency in English: Theory- and data-driven measures and their impact on auditory vs. visual word recognition](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d),” in [journal to be confirmed].
 
 Please cite our paper if the code is useful for your project.
 ```
@@ -23,8 +23,6 @@ Please cite our paper if the code is useful for your project.
 
 ```
 You may also find our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d) useful.
-```
-```
 
 # Hints for First-Time Users
 Note that following the data structure of our [DACT](https://github.com/yining043/VRP-DACT), we use linked list to store solutions. We thus highly recommend you to read our Jupyter notebook for DACT before getting into details of our code for N2S. Please open the [Jupyter notebook](https://github.com/yining043/VRP-DACT/blob/main/Play_with_DACT.ipynb) here :)
