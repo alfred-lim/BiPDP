@@ -25,21 +25,17 @@ This bidirectional Parallel Distributed Processing (PDP) network was trained wit
 <img src="architecture.png" width="500">
 
 # Hints for First-Time Users
-Note that following the data structure of our [DACT](https://github.com/yining043/VRP-DACT), we use linked list to store solutions. We thus highly recommend you to read our Jupyter notebook for DACT before getting into details of our code for N2S. Please open the [Jupyter notebook](https://github.com/yining043/VRP-DACT/blob/main/Play_with_DACT.ipynb) here :)
+Acquire Lens from either: (1) [the main site](https://www.cnbc.cmu.edu/~plaut/Resources.html); (2) [Plaut's lab website](https://www.cnbc.cmu.edu/~plaut/Resources.html); (3) [our backup repository](https://github.com/alfred-lim/Lens). In order to run a simulation, put a model file (e.g., model_reading.tcl), and a training testing examples file (e.g., OP.txt; see ./dictionary for definition of phonological representations of phonemes), and training and testing examples (Tr#.txt and Te#.txt, see ./dictionary for the examples following the two types of phonological representations) into the same directory.
 
-Meanwhile, a refactoring of this repo can be found in branch [refactor](https://github.com/yining043/PDP-N2S/tree/refactor), where the names of variables are changed to be consistent with the paper, some minor bugs are fixed, and the type hints for python are provided, which is supposed to be more convenient for the first-time user of the project. We thank [@ci-ke](https://github.com/ci-ke) for the nice refactoring.
-
-
-# Dependencies
-* Python>=3.8
-* PyTorch>=1.7
-* numpy
-* tensorboard_logger
-* tqdm
+## Required files
+* Model file (e.g., model_reading.tcl, model_spelling.tcl)
+* Data file (e.g., OP.ex, PO.ex)
 
 # Usage
-## Generating data
-Training data is generated on the fly. Please follow repo [Demon0312/Heterogeneous-Attentions-PDP-DRL](https://github.com/Demon0312/Heterogeneous-Attentions-PDP-DRL) to generate validating or test data if needed. We also provide some randomly generated data in the  [datasets](./datasets) folder.
+The model implements a multi-layer neural network from orthography to phonology. The model can be trained in two aspects: training the mapping from orthography to phonology (OP) and training the mapping from phonology to orthography (PO).
+
+## Training data
+Training data is selected from the example file (e.g., OP.ex) on the fly.
 
 ## Training
 ### PDTSP examples
