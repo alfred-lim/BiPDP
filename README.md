@@ -42,69 +42,27 @@ Training data is selected from the example file (e.g., OP.ex) on the fly. Model 
 ## Testing data
 Testing data includes all examples in the example file (e.g., OP.ex) with their frequency ignored. All examples will be tested by default.
 
-## Training command
-### Examples
-1 epoch:
+## Shell commands
+### Start training
+Execute 1 training epoch:
 ```c
 trainParallel2 1
 ```
 
-500 epochs:
+Execute 500 training epochs:
 ```c
 trainParallel2 500
 ```
 
-### PDTSP-LIFO examples
-20 nodes:
-```python
-CUDA_VISIBLE_DEVICES=0 python run.py --problem pdtspl --graph_size 20 --warm_up 2 --max_grad_norm 0.05 --val_m 1 --val_dataset './datasets/pdp_20.pkl' --run_name 'example_training_PDTSPL20'
+### Stop training
+```c
+set stop 1
 ```
 
-50 nodes:
-```python
-CUDA_VISIBLE_DEVICES=0,1 python run.py --problem pdtspl --graph_size 50 --warm_up 1.5 --max_grad_norm 0.15 --val_m 1 --val_dataset './datasets/pdp_50.pkl' --run_name 'example_training_PDTSPL50'
+### Start testing
+This runs the network (forward pass only) on examples in the testing set and accumulates the overall error. If there is no testing set, the training set is used. 
+By default, a small report is printed to the terminal.
+```c
+test
 ```
 
-100 nodes:
-```python
-CUDA_VISIBLE_DEVICES=0,1,2,3 python run.py --problem pdtspl --graph_size 100 --warm_up 1 --max_grad_norm 0.3 --val_m 1 --val_dataset './datasets/pdp_100.pkl' --run_name 'example_training_PDTSPL100'
-```
-
-### Warm start
-You can initialize a run using a pretrained model by adding the --load_path option:
-```python
---load_path '{add model to load here}'
-```
-### Resume Training
-You can resume a training by adding the --resume option:
-```python
---resume '{add last saved checkpoint(model) to resume here}'
-```
-The Tensorboard logs will be saved to folder "logs" and the trained model (checkpoint) will be saved to folder "outputs". Pretrained models are provided in the [pre-trained](./pre-trained) folders.
-
-## Inference
-Load the model and specify the iteration T for inference (using --val_m for data augments):
-
-```python
---eval_only 
---load_path '{add model to load here}'
---T_max 3000 
---val_size 2000 
---val_batch_size 200 
---val_dataset '{add dataset here}' 
---val_m 50
-```
-
-### Examples
-For inference 2,000 PDTSP instances with 100 nodes and no data augment (N2S):
-```python
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run.py --eval_only --no_saving --no_tb --problem pdtsp --graph_size 100 --val_m 1 --val_dataset './datasets/pdp_100.pkl' --load_path 'pre-trained/pdtsp/100/epoch-195.pt' --val_size 2000 --val_batch_size 2000 --T_max 3000
-```
-For inference 2,000 PDTSP instances with 100 nodes using the augments in Algorithm 2 (N2S-A):
-```python
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run.py --eval_only --no_saving --no_tb --problem pdtsp --graph_size 100 --val_m 50 --val_dataset './datasets/pdp_100.pkl' --load_path 'pre-trained/pdtsp/100/epoch-195.pt' --val_size 2000 --val_batch_size 200 --T_max 3000
-```
-See [options.py](./options.py) for detailed help on the meaning of each argument.
-
-# Acknowledgements
-The code and the framework are based on the repos [yining043/VRP-DACT](https://github.com/yining043/VRP-DACT).
