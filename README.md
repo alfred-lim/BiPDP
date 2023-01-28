@@ -24,7 +24,7 @@ This bidirectional Parallel Distributed Processing (PDP) network was trained wit
 # Architecture
 <img src="architecture.png" width="500">
 
-# First-Time Users
+# First-time users
 Acquire Lens from either: (1) [the main site](https://www.cnbc.cmu.edu/~plaut/Resources.html); (2) [Plaut's lab website](https://www.cnbc.cmu.edu/~plaut/Resources.html); or (3) [our backup repository](https://github.com/alfred-lim/Lens). 
 
 # Usage
@@ -42,15 +42,15 @@ Training data is selected from the example file (e.g., OP.ex) on the fly. Model 
 ## Testing data
 Testing data includes all examples in the example file (e.g., OP.ex) with their frequency ignored. All examples will be tested by default.
 
-## Training
+## Training command
 ### Examples
 1 epoch:
-```tcl
+```c
 trainParallel2 1
 ```
 
 500 epochs:
-```tcl
+```c
 trainParallel2 500
 ```
 
