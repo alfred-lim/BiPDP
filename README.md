@@ -27,6 +27,8 @@ This bidirectional Parallel Distributed Processing (PDP) network was trained wit
 # First-time users
 Acquire Lens from either: (1) [the main site](https://ni.cmu.edu/~plaut/Lens/Manual/index.html); (2) [Plaut's lab website](https://www.cnbc.cmu.edu/~plaut/Resources.html); or (3) [our backup repository](https://github.com/alfred-lim/Lens). 
 
+For the general Lens manual, point your browser at index.html inside the Manual folder visit or, alternatively, visit https://ni.cmu.edu/~plaut/Lens/
+
 # Usage
 The model implements a multi-layer neural network from orthography to phonology. The model can be trained in two aspects: training the mapping from orthography to phonology (OP; as configured in model_reading.tcl) and training the mapping from phonology to orthography (PO; as configured in model_spelling.tcl).
 
@@ -42,7 +44,7 @@ Training data is selected from the example file (e.g., OP.ex) on the fly. Model 
 ## Testing data
 Testing data includes all examples in the example file (e.g., OP.ex) with their frequency ignored. All examples will be tested by default.
 
-## Shell commands
+## Shell commands (for Lens console)
 ### Start training
 Execute 1 training epoch:
 ```c
