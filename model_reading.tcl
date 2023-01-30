@@ -4,14 +4,15 @@
 # Task: create reading (O2P) model on Lens
 # Data: Lim, O'Brien, & Luca (submitted) word dataset
 
-## Define pattern files location
-set patfileLoc "patfile/" 
-
 ## Set size of layers (number of units)
-set hiddenSize 100 # Hidden layer
-set inputSize  260 # Ortho layer
-set outputSize 224 # Phon layer
-set cleanSize  50  # Cleanup layer
+# Hidden layer
+set hiddenSize 100 
+# Ortho layer
+set inputSize  260 
+# Phon layer
+set outputSize 224
+# Cleanup layer 
+set cleanSize  50  
 
 ## Set up model
 # Create continuous network  with 4 time intervals and 3 ticks per interval (total 12 ticks)
@@ -39,7 +40,7 @@ connectGroups   Phon CleanupP -bi -mean 0 -range 0.5
 
 ## Set up training dataset
 # Load example file then name the dataset as OP_training
-loadExamples $patfileLoc/OP.ex -s OP_training
+loadExamples OP.ex -s OP_training
 # Delay between onset of Input (Orth) and Output (Phon) - total 6 ticks
 setObj OP_training.graceTime 2.0
 # Event last for full 4 time intervals (prevent early termination) - total 12 ticks
@@ -52,7 +53,7 @@ exampleSetMode OP_training PROBABILISTIC
 
 ## Set up testing dataset
 # Load example file then name the dataset as OP_testing
-loadExamples $patfileLoc/OP.ex -s OP_testing
+loadExamples OP.ex -s OP_testing
 # Delay between onset of Input (Orth) and Output (Phon) - total 6 ticks
 setObj OP_testing.graceTime 2.0
 # Event last for full 4 time intervals (prevent early termination) - total 12 ticks
@@ -63,14 +64,22 @@ setObj OP_testing.maxTime   4.0
 exampleSetMode OP_testing ORDERED
 
 ## Set model parameters
-setObj 	momentum          	0.8		#momentum descent
-setObj 	learningRate        0.5000	#scales the weight deltas (changes)
-set 	tillUpdates 		1 		#set default training epoch
-setObj 	clampStrength   	1.0     #set SOFT_CLAMP strength to max
-setObj 	pseudoExampleFreq 	1       #simply scale the error and output derivatives by the example frequency (i.e. pseudo-frequencies)
-setObj  outputCostStrength 	0.1 	#encourage units to have binary outputs
-setObj  testGroupCrit      	0.25	#when testing, an example is considered correct if all units is within this range to target value
-setObj  reportInterval     	1       #report network progress every 1 epoch
+# Momentum descent
+setObj 	momentum          	0.8	
+# Scales the weight deltas (changes)	
+setObj 	learningRate        0.5000	
+# Set default training epoch
+set 	tillUpdates 		1 	
+# Set SOFT_CLAMP strength to max	
+setObj 	clampStrength   	1.0     
+# Simply scale the error and output derivatives by the example frequency (i.e. pseudo-frequencies)
+setObj 	pseudoExampleFreq 	1   
+# Encourage units to have binary outputs    
+setObj  outputCostStrength 	0.1 	
+# When testing, an example is considered correct if all units is within this range to target value
+setObj  testGroupCrit      	0.25
+# Report network progress every 1 epoch	
+setObj  reportInterval     	1       
 
 # Define function to launch clients
 proc launchClients {numClient} {
