@@ -22,6 +22,9 @@ op_file = open('OP.ex','wb') #OP example file
 po_file = open('PO.ex','wb') #PO example file
 write_examples(data, op_file, po_file) #call function to write examples
 
+# Close files
+op_file.close()
+po_file.close()
 ```
 
 ## Details of steps from Moby/CoCa to MikeNet OtoP Dictionary
