@@ -15,7 +15,7 @@ The Python script build_examples.py write words (with their orthography and phon
 ### Build OP and PO files
 ```python
 # Read word list
-data = pd.read_excel('word_list.xlsx',na_values='',keep_default_na=False)
+data = pd.read_excel('corpus.xlsx',na_values='',keep_default_na=False)
 
 # Create empty example files
 op_file = open('OP.ex','wb') #OP example file
