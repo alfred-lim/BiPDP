@@ -20,7 +20,9 @@ data = pd.read_excel('corpus.xlsx',na_values='',keep_default_na=False)
 # Create empty example files
 op_file = open('OP.ex','wb') #OP example file
 po_file = open('PO.ex','wb') #PO example file
-write_examples(data, op_file, po_file) #call function to write examples
+
+# Call function to write examples
+write_examples(data, op_file, po_file)
 
 # Close files
 op_file.close()
