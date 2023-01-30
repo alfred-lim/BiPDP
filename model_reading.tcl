@@ -40,7 +40,7 @@ connectGroups   Phon CleanupP -bi -mean 0 -range 0.5
 
 ## Set up training dataset
 # Load example file then name the dataset as OP_training
-loadExamples OP.ex -s OP_training
+loadExamples op.ex -s OP_training
 # Delay between onset of Input (Orth) and Output (Phon) - total 6 ticks
 setObj OP_training.graceTime 2.0
 # Event last for full 4 time intervals (prevent early termination) - total 12 ticks

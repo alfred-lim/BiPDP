@@ -52,7 +52,7 @@ exampleSetMode PO_training PROBABILISTIC
 
 ## Set up testing dataset
 # Load example file then name the dataset as PO_testing
-loadExamples PO.ex -s PO_testing
+loadExamples po.ex -s PO_testing
 # Delay between onset of Input (Orth) and Output (Phon) - total 6 ticks
 setObj PO_testing.graceTime 2.0
 # Event last for full 4 time intervals (prevent early termination) - total 12 ticks
