@@ -1,18 +1,28 @@
-# Derivation of OP and PI dictionaries
+# Build OP or PO example files
 
-This file documents use of create_examples.py for the purpose of
-building a training dictionary for use in OP and PO learning simulation
-built in Lens. Dictionary entries, ortho/phono pairs together with
-frequency weights, are derived from the CoCa and Moby
-databases. Frequency information comes from CoCa
-<http://corpus.byu.edu/coca/>, and O-to-P mappings from the Moby
-Pronunciator <http://icon.shef.ac.uk/Moby/>.
+This file documents use of generate_examples.py for the purpose of building an example file for use in OP and PO learning simulation in Lens. Word entries, ortho/phono pairs together with frequency weights, are derived from the ELP and MALD
+databases. Frequency information comes from SUBTLEX-US (Brysbaert et al., 2012).
 
-Words selected for inclusion in the training dictionary are
-monosyllabic.
+Words selected for inclusion in the example files are monosyllabic.
 
-We incorporate some simple transformations to the Moby pronunciations
-in order to facilitate use in a Mikenet framework.
+# Usage
+The Python script build_examples.py write words (with their orthography and phonological representations) to OP and PO examples files. These example files are created in a format that is compatible with Lens.
+
+## Required files
+* Python file (generate_examples.py)
+* Corpus file (corpus.xlsx)
+
+### Build OP and PO files
+```python
+# Read word list
+data = pd.read_excel('word_list.xlsx',na_values='',keep_default_na=False)
+
+# Create empty example files
+op_file = open('OP.ex','wb') #OP example file
+po_file = open('PO.ex','wb') #PO example file
+write_examples(data, op_file, po_file) #call function to write examples
+
+```
 
 ## Details of steps from Moby/CoCa to MikeNet OtoP Dictionary
 1. Read from Moby pronunciator and make some replacements in the phones.
