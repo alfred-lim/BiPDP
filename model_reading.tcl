@@ -86,13 +86,13 @@ proc launchClients {numClient} {
 	lens
 }
 
-# Define function to set training data for all clients (for parallel training)
+# Define function to set training data for all clients (for parallel training only)
 proc setAllTrainingSet { setName } {
 	useTrainingSet $setName
 	sendEval "useTrainingSet $setName"
 }
 
-# Define function to set testing data for all clients (for parallel training)
+# Define function to set testing data for all clients (for parallel training only)
 proc setAllTestingSet { setName } {
 	useTestingSet $setName
 	sendEval "useTestingSet $setName"
@@ -102,27 +102,37 @@ proc setAllTestingSet { setName } {
 set stop 0
 
 ## Define custom training function
-proc trainParallel2 { tillUpdates } {
+proc train2 { tillUpdates } {
 	## Declare variables for training
-	set toWeightCount 100 	#save weight every 100 epochs
-	set toTestCount 100 	#test model every 100 epochs
-	set toOutCount 1000 	#save all layers activity for MSE calculation later
-	setAllTrainingSet "OP_training" 	#set training set to be used
-	setAllTestingSet "OP_testing"		#set testing set to be used
-	set fullTestingSet consistLH_b10_test               #
-	set fFull [open "testLog_full_reading.txt" "a"] 	#set accuracy output filename to store accuracy per testing
-	upvar 1 stop stop 		#set as global variable
-	upvar 1 Test Test  		#set as global variable
+	# Save weight every 100 epochs
+	set toWeightCount 100 	
+	# Test model every 100 epochs
+	set toTestCount 100 	
+	# Save all layers activity for MSE calculation later
+	set toOutCount 1000 	
+	# Set training set to be used
+	setAllTrainingSet "OP_training" 
+	# Set testing set to be used	
+	setAllTestingSet "OP_testing"		
+	# Set accuracy output filename to store accuracy per testing
+	set fFull [open "testLog_full_reading.txt" "a"] 
+	# Set as global variable	
+	upvar 1 stop stop 		
+	# Set as global variable
+	upvar 1 Test Test  		
 	
 	## Create accuracy output file
-	puts $fFull "[getObj trainingSet.name] $fullTestingSet [getObj learningRate] $tillUpdates"
+	# Write model details
+	puts $fFull "[getObj trainingSet.name] OP_testing [getObj learningRate] $tillUpdates"
+	# Write data headers
 	puts $fFull "mode batchNum totalUpdates numExamples numTicks totalError exampleError tickError totalCost tickCost examplesCorrect percentCorrect sysTime"
+	# Save and close file
 	close $fFull
 	
 	## Training loop - loop for X epochs
 	for {set i [getObj totalUpdates]} {$i < $tillUpdates} {incr i} {
 		# Perform training and report its outcome to console
-		trainParallel 1 -report 1
+		train 1 -report 1
 		
 		# Check if it's the right epoch to perform testing
 		if { [getObj totalUpdates] % $toTestCount == 0} {
