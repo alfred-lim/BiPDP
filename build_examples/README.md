@@ -1,4 +1,4 @@
-# Build OP or PO example files
+# Build O2P or P2O example files
 
 This file documents use of generate_examples.py for the purpose of building an example file for use in OP and PO learning simulation in Lens. Word entries, ortho/phono pairs together with frequency weights, are derived from the ELP and MALD
 databases. Frequency information comes from SUBTLEX-US (Brysbaert et al., 2012).
