@@ -6,7 +6,7 @@ This file documents use of create_orth_vectors.py for the purpose of creating bi
 We used a position sensitive slot-based vowel-centered format for both orthographic representation (e.g., Harm & Seidenberg, 1999, 2004).
 
 The orthographic layer comprises of 260 units, corresponding to 10 letter position slots × 26 possible letters. Words are coded as vowel-centred, such that
-the fourth slot was filled with the left-most vowel of a word (e.g., mince → _ _ m i n c e _ _ _ )
+the fourth slot was filled with the left-most vowel of a word (e.g., yap → _ _ y a p _ _ _ _ _ )
 
 <img src="orth_coding_scheme.png" width="500">
 
