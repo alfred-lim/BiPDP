@@ -5,16 +5,17 @@ This file documents use of create_orth_vectors.py for the purpose of creating bi
 # Coding scheme
 We used a position sensitive slot-based vowel-centered format for both orthographic representation (e.g., Harm & Seidenberg, 1999, 2004).
 
-The orthographic layer comprises of 260 units, corresponding to 10 letter position slots × 26 possible letters. Words are coded as vowel-centred, such that
-the fourth slot was filled with the left-most vowel of a word (e.g., yap → _ _ y a p _ _ _ _ _ )
+The orthographic layer comprises of 260 units, corresponding to 10 letter position slots × 26 possible letters. Words are coded as vowel-centred, such that the fourth slot was filled with the left-most vowel of a word (e.g., yap → _ _ y a p _ _ _ _ _ )
 
 <img src="orth_coding_scheme.png" width="500">
 
 # Usage
-The Python script build_examples.py write words (with their orthography and phonological representations) to OP and PO examples files. These example files are created in a format that is compatible with Lens.
+First, use the Python script create_orth_slots.py to convert words to slot-based orthographic representations. This will add a new _OrthSlot_ column to the corpus Excel file.
+
+Then, use the Python script create_orth_vectors.py to convert slot-based orthograhic representations to binary vectors. This will add a new _OrthVector_ column to the corpus Excel file.
 
 ## Required files
-* Python file (generate_examples.py)
+* Python files (create_orth_slots.py, create_orth_vector.py)
 * Corpus file (corpus.xlsx)
 
 ### Build OP and PO files
