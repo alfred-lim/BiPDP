@@ -12,7 +12,7 @@ The orthographic layer comprises of 260 units, corresponding to 10 letter positi
 # Usage
 First, use the Python script [create_orth_slots.py](create_orth_slots.py) create_orth_slots.py to convert words to slot-based orthographic representations. This will add a new _OrthSlot_ column to the corpus Excel file.
 
-Then, use the Python script create_orth_vectors.py to convert slot-based orthograhic representations to binary vectors. This will add a new _OrthVector_ column to the corpus Excel file.
+Then, use the Python script [create_orth_vectors.py](create_orth_vectors.py) create_orth_vectors.py to convert slot-based orthograhic representations to binary vectors. This will add a new _OrthVector_ column to the corpus Excel file.
 
 ## Required files
 * Python files (create_orth_slots.py, create_orth_vector.py)
