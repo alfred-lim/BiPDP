@@ -34,16 +34,16 @@ n_letters = len(all_letters)
 max_word_length = 10 
 
 # Read word list
-data_df = pd.read_excel('word_list_&orthpat.xlsx',na_values='',keep_default_na=False)
+data_df = pd.read_excel('word_list_&orthslot.xlsx',na_values='',keep_default_na=False)
 
 # Loop word-by-word
 for x in range(data_df.shape[0]):
     # Get orthographic vowel centered pattern
-    orth_pat = str(data_df['OrthPat'][x])
-    print(orth_pat)
+    orth_slot = str(data_df['OrthSlot'][x])
+    print(orth_slot)
 
     # Convert to binary one-hot vector by making use of PyTorch
-    orth_tensor = lineToTensor(orth_pat) 
+    orth_tensor = lineToTensor(orth_slot) 
     orth_tensor = orth_tensor.view(1,-1)
     orth_tensor = orth_tensor.squeeze(0)
     orth_tensor = orth_tensor.int()
@@ -54,7 +54,7 @@ for x in range(data_df.shape[0]):
     orth_str = np.array2string(orth_np)
     # Remove unwanted symbols due to conversion (e.g., new line char)
     orth_str = re.sub('[^0-9 ]+', '', orth_str) 
-    data_df.loc[x, 'OrthBin'] = orth_str  
+    data_df.loc[x, 'OrthVector'] = orth_str  
 
 # Write to Excel file
-data_df.to_excel('word_list_&orthpat&orthbin.xlsx')
+data_df.to_excel('word_list_&orthslot&orthvector.xlsx')
