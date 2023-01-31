@@ -1,9 +1,14 @@
 # Create orthographic vectors
 
-This file documents use of generate_examples.py for the purpose of building an example file for use in OP and PO learning simulation in Lens. Word entries, ortho/phono pairs together with frequency weights, are derived from the ELP and MALD
-databases. Frequency information comes from SUBTLEX-US (Brysbaert et al., 2012).
+This file documents use of create_orth_vectors.py for the purpose of creating binary orthographic vectors of words to be used in neural networks. 
 
-Words selected for inclusion in the example files are monosyllabic.
+# Coding scheme
+We used a position sensitive slot-based vowel-centered format for both orthographic representation (e.g., Harm & Seidenberg, 1999, 2004).
+
+The orthographic layer comprises of 260 units, corresponding to 10 letter position slots × 26 possible letters. Words are coded as vowel-centred, such that
+the fourth slot was filled with the left-most vowel of a word (e.g., mince → _ _ m i n c e _ _ _ )
+
+<img src="orth_coding_scheme.png" width="500">
 
 # Usage
 The Python script build_examples.py write words (with their orthography and phonological representations) to OP and PO examples files. These example files are created in a format that is compatible with Lens.
