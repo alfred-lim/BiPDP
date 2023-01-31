@@ -9,10 +9,6 @@ import re
 import numpy as np
 import pandas as pd
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.autograd import Variable
-import torch.optim as optim
 
 # Find letter position index, e.g. "a" = 0
 def letterToIndex(letter):
@@ -28,18 +24,17 @@ def lineToTensor(line):
             tensor[li][0][letterToIndex(letter)] = 1
     return tensor
     
+# Define all possible letters
 all_letters = 'abcdefghijklmnopqrstuvwxyz'
+# Define vowels
 orth_vowels = 'aeiou'
-phon_vowels = 'eaiERYyoAcuUVCW' #ASCII
-
-n_feature = 28 #number of feature from Moran
-max_phon_len = 8 #how many positionals slots for phoneme
-n_output = n_feature * max_phon_len
-n_letters = len(all_letters) #all possible letters
-max_word_length = 10 #how many positionals slots for orth
+# Get number of possible letters
+n_letters = len(all_letters) 
+# Define maximum positional slots
+max_word_length = 10 
 
 # Read word list
-data_df = pd.read_excel('MALD_monoSyl&Phon&Ascii&Pat.xlsx',na_values='',keep_default_na=False)
+data_df = pd.read_excel('word_list_&orthpat.xlsx',na_values='',keep_default_na=False)
 
 # Loop word-by-word
 for x in range(data_df.shape[0]):
@@ -62,4 +57,4 @@ for x in range(data_df.shape[0]):
     data_df.loc[x, 'OrthBin'] = orth_str  
 
 # Write to Excel file
-data_df.to_excel('word_list.xlsx')
+data_df.to_excel('word_list_&orthpat&orthbin.xlsx')
