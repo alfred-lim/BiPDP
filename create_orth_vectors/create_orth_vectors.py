@@ -34,7 +34,7 @@ n_letters = len(all_letters)
 max_word_length = 10 
 
 # Read word list
-data_df = pd.read_excel('word_list_&orthslot.xlsx',na_values='',keep_default_na=False)
+data_df = pd.read_excel('corpus_&orthslot.xlsx',na_values='',keep_default_na=False)
 
 # Loop word-by-word
 for x in range(data_df.shape[0]):
@@ -57,4 +57,4 @@ for x in range(data_df.shape[0]):
     data_df.loc[x, 'OrthVector'] = orth_str  
 
 # Write to Excel file
-data_df.to_excel('word_list_&orthslot&orthvector.xlsx')
+data_df.to_excel('corpus_&orthslot&orthvector.xlsx')
