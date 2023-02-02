@@ -12,6 +12,8 @@ The Python script build_examples.py write words (with their orthography and phon
 * Python file (generate_examples.py)
 * Corpus file (corpus.xlsx)
 
+If you need a sample corpus file, you may use the one published in our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d).
+
 ### Build OP and PO files
 ```python
 # Read word list
