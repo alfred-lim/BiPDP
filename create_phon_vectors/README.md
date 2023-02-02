@@ -10,10 +10,10 @@ The orthographic layer comprises of 260 units, corresponding to 10 letter positi
 <img src="phon_coding_scheme.png" width="700">
 
 # Usage
-First, use the Python script [create_orth_slots.py](create_orth_slots.py) create_orth_slots.py to convert words to slot-based orthographic representations. This will add a new _OrthSlot_ column to the corpus Excel file.
+First, use the Python script [create_orth_slots.py](create_phon_slots.py) to convert words to slot-based phonological representations. This will add a new _PhonSlot_ column to the corpus Excel file.
 
-Then, use the Python script [create_orth_vectors.py](create_orth_vectors.py) create_orth_vectors.py to convert slot-based orthograhic representations to binary vectors. This will add a new _OrthVector_ column to the corpus Excel file.
+Then, use the Python script [create_orth_vectors.py](create_phon_vectors.py) to convert slot-based phonological representations to binary vectors. This will add a new _PhonVector_ column to the corpus Excel file.
 
 ## Required files
-* Python files (create_orth_slots.py, create_orth_vector.py)
+* Python files (create_phon_slots.py, create_phon_vector.py)
 * Corpus file (corpus.xlsx)
