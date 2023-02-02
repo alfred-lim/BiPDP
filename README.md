@@ -41,7 +41,7 @@ The model implements a multi-layer neural network from orthography to phonology.
 In order to run a simulation, put a model file (e.g., model_reading.tcl), and a training & testing example file (e.g., OP.txt; see ./dictionary for definition of phonological representations of phonemes), and training and testing examples (Tr#.txt and Te#.txt, see ./dictionary for the examples following the two types of phonological representations) into the same directory.
 
 ## Required files
-* Model file (e.g., model_reading.tcl, model_spelling.tcl)
+* Model file (e.g., ``model_reading.tcl``, ``model_spelling.tcl``)
 * Examples file that contains training/testing data (e.g., op.ex, po.ex)
 
 ## Training data
