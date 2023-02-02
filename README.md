@@ -36,8 +36,8 @@ folder at the top level of your main drive (e.g., C:\Lens).
 
 To be able to run Lens, you need to add a new environment variable `LENSDIR`, and add the Bin folder to your search path. 
 ```
-        **Variable name**   LENSDIR
-        **Variable value**  C:\Lens        (or wherever you put the Lens folder)
+        Variable name:   LENSDIR
+        Variable value:  C:\Lens        (or wherever you put the Lens folder)
 ```
 
 # Usage
