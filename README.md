@@ -36,13 +36,13 @@ In order to run a simulation, put a model file (e.g., model_reading.tcl), and a 
 
 ## Required files
 * Model file (e.g., model_reading.tcl, model_spelling.tcl)
-* Data file (e.g., OP.ex, PO.ex)
+* Examples file that contains training/testing data (e.g., op.ex, po.ex)
 
 ## Training data
-Training data is selected from the example file (e.g., OP.ex) on the fly. Model files are configured to select examples based on their given frequency (as indicated in OP.ex and PO.ex). 
+Training data is selected from the example file (e.g., op.ex) on the fly. Model files are configured to select examples based on their given frequency (as indicated in op.ex and po.ex). 
 
 ## Testing data
-Testing data includes all examples in the example file (e.g., OP.ex) with their frequency ignored. All examples will be tested by default.
+Testing data includes all examples in the example file (e.g., op.ex) with their frequency ignored. All examples will be tested by default.
 
 ## Shell commands (for Lens console)
 ### Start training
