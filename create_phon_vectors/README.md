@@ -18,6 +18,7 @@ Then, use the Python script [create_phon_vectors.py](create_phon_vectors.py) to 
 
 ## Required files
 * Python files (create_phon_slots.py, create_phon_vector.py)
-* Corpus file (corpus.xlsx)
+* Corpus file (e.g., corpus.xlsx)
+* List of phonological features (e.g., phonological_features.xlsx)
 
-If you need a sample corpus file, you may use the one published in our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d).
+If you need a sample corpus file or list of phonological features, you may find our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d) useful.
