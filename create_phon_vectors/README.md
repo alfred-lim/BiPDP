@@ -17,8 +17,8 @@ First, use the Python script [create_phon_slots.py](create_phon_slots.py) to con
 Then, use the Python script [create_phon_vectors.py](create_phon_vectors.py) to convert slot-based phonological representations to binary vectors. This will add a new _PhonVector_ column to the corpus Excel file.
 
 ## Required files
-* Python files (create_phon_slots.py, create_phon_vector.py)
-* Corpus file (e.g., corpus.xlsx)
-* List of phonological features (e.g., phonological_features.xlsx)
+* Python files (``create_phon_slots.py``, ``create_phon_vector.py``)
+* Corpus file (e.g., ``corpus.xlsx``)
+* List of phonological features (e.g., ``phonological_features.xlsx``)
 
 If you need a sample corpus file or list of phonological features, you may find our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d) useful.
