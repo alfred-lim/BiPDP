@@ -24,12 +24,6 @@ This bidirectional Parallel Distributed Processing (PDP) network was trained wit
 # Architecture
 <img src="architecture.png" width="500">
 
-# Directory structure
-
-+ `build_examples` contains a Python file that can be used to build Lens examples files.
-+ `create_orth_vectors` contains Python files that create binary orthographic vectors of words to be used in neural networks.
-+ `create_phon_vectors` contains Python files that create binary phonological vectors of words to be used in neural networks.
-
 # First-time users
 Acquire Lens from either: (1) [the main site](https://ni.cmu.edu/~plaut/Lens/Manual/index.html); (2) [Plaut's lab website](https://www.cnbc.cmu.edu/~plaut/Resources.html); or (3) [our backup repository](https://github.com/alfred-lim/Lens). 
 
@@ -75,4 +69,9 @@ By default, a small report is printed to the terminal.
 ```c
 test
 ```
+
+# Utilities
++ `build_examples` contains a Python file that can be used to build Lens examples files.
++ `create_orth_vectors` contains Python files that create binary orthographic vectors of words to be used in neural networks.
++ `create_phon_vectors` contains Python files that create binary phonological vectors of words to be used in neural networks.
 
