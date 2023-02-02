@@ -3,7 +3,7 @@
 This file documents use of create_orth_vectors.py for the purpose of creating binary orthographic vectors of words to be used in neural networks. 
 
 # Coding scheme
-We used a position sensitive slot-based vowel-centered format for both orthographic representation (e.g., Harm & Seidenberg, 1999, 2004).
+We used a position sensitive slot-based vowel-centered format for orthographic representation (e.g., Harm & Seidenberg, 1999, 2004).
 
 The orthographic layer comprises of 260 units, corresponding to 10 letter position slots × 26 possible letters. Words are coded as vowel-centred, such that the fourth slot was filled with the left-most vowel of a word (e.g., yap → _ _ y a p _ _ _ _ _ )
 
