@@ -29,6 +29,17 @@ Acquire Lens from either: (1) [the main site](https://ni.cmu.edu/~plaut/Lens/Man
 
 For the general Lens manual, point your browser at index.html inside the Manual folder visit or, alternatively, visit https://ni.cmu.edu/~plaut/Lens/
 
+## Lens installation
+### Windows
+Lens under Windows does not handle pathnames with spaces well. A good way to avoid this problem (if you have Administrator privileges) is to place the Lens
+folder at the top level of your main drive (e.g., C:\Lens). 
+
+To be able to run Lens, you need to add a new environment variable `LENSDIR`, and add the Bin folder to your search path. 
+```
+        Variable name   LENSDIR
+        Variable value  C:\Lens        (or wherever you put the Lens folder)
+```
+
 # Usage
 The model implements a multi-layer neural network from orthography to phonology. The model can be trained in two aspects: training the mapping from orthography to phonology (OP; as configured in ``model_reading.tcl``) and training the mapping from phonology to orthography (PO; as configured in ``model_spelling.tcl``).
 
