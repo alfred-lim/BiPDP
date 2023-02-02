@@ -36,19 +36,21 @@ Acquire Lens from either: (1) [the main site](https://ni.cmu.edu/~plaut/Lens/Man
 For the general Lens manual, point your browser at index.html inside the Manual folder visit or, alternatively, visit https://ni.cmu.edu/~plaut/Lens/
 
 # Usage
-The model implements a multi-layer neural network from orthography to phonology. The model can be trained in two aspects: training the mapping from orthography to phonology (OP; as configured in model_reading.tcl) and training the mapping from phonology to orthography (PO; as configured in model_spelling.tcl).
+The model implements a multi-layer neural network from orthography to phonology. The model can be trained in two aspects: training the mapping from orthography to phonology (OP; as configured in ``model_reading.tcl``) and training the mapping from phonology to orthography (PO; as configured in ``model_spelling.tcl``).
 
-In order to run a simulation, put a model file (e.g., model_reading.tcl), and a training & testing example file (e.g., OP.txt; see ./dictionary for definition of phonological representations of phonemes), and training and testing examples (Tr#.txt and Te#.txt, see ./dictionary for the examples following the two types of phonological representations) into the same directory.
+In order to run a simulation, put a model file (e.g., model_reading.tcl), and a training/testing examples file (e.g., op.txt; see ./build_examples for a demonstration on how these examples files can be created) into the same directory.
+
+Refer to our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d) for definition of phonological representations of phonemes.
 
 ## Required files
 * Model file (e.g., ``model_reading.tcl``, ``model_spelling.tcl``)
-* Examples file that contains training/testing data (e.g., op.ex, po.ex)
+* Examples file that contains training/testing data (e.g., ``op.ex``, ``po.ex``)
 
 ## Training data
-Training data is selected from the example file (e.g., op.ex) on the fly. Model files are configured to select examples based on their given frequency (as indicated in op.ex and po.ex). 
+Training data is selected from the example file (e.g., ``op.ex``) on the fly. Model files are configured to select examples based on their given frequency (as indicated in ``op.ex`` and ``po.ex``). 
 
 ## Testing data
-Testing data includes all examples in the example file (e.g., op.ex) with their frequency ignored. All examples will be tested by default.
+Testing data includes all examples in the example file (e.g., ``op.ex``) with their frequency ignored. All examples will be tested by default.
 
 ## Shell commands (for Lens console)
 ### Start training
@@ -68,7 +70,7 @@ set stop 1
 ```
 
 ### Start testing
-This runs the network (forward pass only) on examples in the testing set and accumulates the overall error. If there is no testing set, the training set is used. 
+This runs the network (without adjusting the weights) on examples in the testing set and accumulates the overall error. If there is no testing set, the training set is used. 
 By default, a small report is printed to the terminal.
 ```c
 test
