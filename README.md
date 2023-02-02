@@ -71,7 +71,7 @@ test
 ```
 
 # Utilities
-+ `build_examples` contains a Python file that can be used to build Lens examples files.
++ [`build_examples`](build_examples/) contains a Python file that can be used to build Lens examples files.
 + `create_orth_vectors` contains Python files that create binary orthographic vectors of words to be used in neural networks.
 + `create_phon_vectors` contains Python files that create binary phonological vectors of words to be used in neural networks.
 
