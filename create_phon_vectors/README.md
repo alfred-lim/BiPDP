@@ -19,3 +19,5 @@ Then, use the Python script [create_phon_vectors.py](create_phon_vectors.py) to 
 ## Required files
 * Python files (create_phon_slots.py, create_phon_vector.py)
 * Corpus file (corpus.xlsx)
+
+If you need a sample corpus file, you may use the one published in our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d).
