@@ -15,7 +15,7 @@ First, use the Python script [create_orth_slots.py](create_orth_slots.py) create
 Then, use the Python script [create_orth_vectors.py](create_orth_vectors.py) create_orth_vectors.py to convert slot-based orthograhic representations to binary vectors. This will add a new _OrthVector_ column to the corpus Excel file.
 
 ## Required files
-* Python files (create_orth_slots.py, create_orth_vector.py)
-* Corpus file (corpus.xlsx)
+* Python files (``create_orth_slots.py``, ``create_orth_vector.py``)
+* Corpus file (e.g., ``corpus.xlsx``)
 
 If you need a sample corpus file, you may use the one published in our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d).
