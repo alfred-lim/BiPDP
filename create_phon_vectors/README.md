@@ -7,7 +7,7 @@ We used a position sensitive slot-based vowel-centered format for both orthograp
 
 The orthographic layer comprises of 260 units, corresponding to 10 letter position slots × 26 possible letters. Words are coded as vowel-centred, such that the fourth slot was filled with the left-most vowel of a word (e.g., yap → _ _ y a p _ _ _ _ _ )
 
-<img src="phon_coding_scheme.png" width="500">
+<img src="phon_coding_scheme.png" width="600">
 
 # Usage
 First, use the Python script [create_orth_slots.py](create_orth_slots.py) create_orth_slots.py to convert words to slot-based orthographic representations. This will add a new _OrthSlot_ column to the corpus Excel file.
