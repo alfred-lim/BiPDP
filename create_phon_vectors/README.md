@@ -12,7 +12,7 @@ A list of phonemes and their respective phonological features used in the presen
 <img src="phon_coding_scheme.png" width="700">
 
 ## Example
-zest → /zEst/
+The word 'zest' → /zEst/
 
 ### Slot-based encoding
 ``_ _ z E s t _ _``
