@@ -1,6 +1,6 @@
-# Create orthographic vectors
+# Create phonological vectors
 
-This file documents use of create_orth_vectors.py for the purpose of creating binary orthographic vectors of words to be used in neural networks. 
+This file documents use of [create_phon_slots.py](create_phon_slots.py) and [create_phon_vectors.py](create_phon_vectors.py) for the purpose of creating binary orthographic vectors of words to be used in neural networks. 
 
 # Coding scheme
 We used a position sensitive slot-based vowel-centered format for phonological representation (e.g., Harm & Seidenberg, 1999, 2004).
