@@ -7,7 +7,7 @@ We used a position sensitive slot-based vowel-centered format for phonological r
 
 A word’s phonology was represented with nodes coding phoneme features (8 phoneme position slots × 28 possible phonological features = 224 units). Each phoneme was encoded by a binary vector of 28 phonological features (e.g., anterior, approximant, back, consonantal, etc.) taken from PHOIBLE (Moran & McCloy, 2019), an online repository of cross-lingual phonological data. The value of 1 represented the presence of that feature and 0 represented its absence. 
 
-A list of phonemes and their respective phonological features used in the present work can be found in the Open Science Framework (OSF) repository for this project
+A list of phonemes and their respective phonological features used in the example below can be found in our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d).
 
 <img src="phon_coding_scheme.png" width="700">
 
