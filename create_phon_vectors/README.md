@@ -12,7 +12,7 @@ A list of phonemes and their respective phonological features used in the presen
 <img src="phon_coding_scheme.png" width="700">
 
 ## Example
-''_ _ z E s t _ _''
+_ _ z E s t _ _
 ``
 ['_', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ['_', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
