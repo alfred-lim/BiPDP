@@ -38,7 +38,7 @@ For the general Lens manual, point your browser at index.html inside the Manual 
 # Usage
 The model implements a multi-layer neural network from orthography to phonology. The model can be trained in two aspects: training the mapping from orthography to phonology (OP; as configured in ``model_reading.tcl``) and training the mapping from phonology to orthography (PO; as configured in ``model_spelling.tcl``).
 
-In order to run a simulation, put a model file (e.g., model_reading.tcl), and a training/testing examples file (e.g., op.txt; see ./build_examples for a demonstration on how these examples files can be created) into the same directory.
+In order to run a simulation, put a model file (e.g., model_reading.tcl), and a training/testing examples file (e.g., ``op.txt``; see ./build_examples for a demonstration on how these examples files can be created) into the same directory.
 
 Refer to our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d) for definition of phonological representations of phonemes.
 
