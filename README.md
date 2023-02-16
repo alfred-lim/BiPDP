@@ -1,19 +1,18 @@
 # Bidirectional-PDP
 This repo implements our paper:
 
-Lim, O'Brien, & Onnis (submitted), “[Orthography-phonology consistency in English: Theory- and data-driven measures and their impact on auditory vs. visual word recognition](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d),” in [journal name].
+Lim, O'Brien, & Onnis (In press), “[Orthography-phonology consistency in English: Theory- and data-driven measures and their impact on auditory vs. visual word recognition](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d),” in Behavior Research Methods.
 
 Please cite our paper if the code is useful for your project.
 ```
 @article{TBD,
   title={Orthography-phonology consistency in English: Theory- and data-driven measures and their impact on auditory vs. visual word recognition},
   author={Lim, Alfred and Onnis, Luca and O'Brien, Beth A},
-  journal={TBD},
+  journal={Behavior Research Methods},
   volume={TBD},
   number={TBD},
   pages={TBD},
-  year={TBD},
-  publisher={TBD}
+  year={In press}
 }
 ```
 You may also find our [OSF repository](https://osf.io/wdzqc/?view_only=d6ef4592811441779ce7e8801dec805d) useful.
